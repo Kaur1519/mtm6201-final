@@ -1,0 +1,169 @@
+:root{
+
+    /* color palete */
+    --primary-color: #F7F4F1;
+    --secondary-color: #30505B;
+    --tertiary-color: #C3A283;
+    --white-text: #FFFFFF;
+
+    /* font family */
+    --font-family-heading-nav:  "Roboto", sans-serif;
+    --font-family-text-buttons: "Lobster Two", sans-serif;
+
+    /* mobile font size */
+    --mobile-logo: 2rem;
+    --mobile-nav: 1.3rem;
+    --mobile-main-heading: 3.125rem;
+    --mobile-section-heading: 2.6875rem;
+    --mobile-paragraph-heading: 1.5625rem;
+    --mobile-button: 1.25rem;
+    --mobile-text: 1rem;
+    --mobile-key-points: 1.125rem; 
+
+    /* tablet font size */
+    --tablet-nav: 1.3rem;
+    --tablet-main-heading: 5rem;
+    --tablet-section-heading: 3.3125rem;
+    --tablet-paragraph-heading: 2.1875rem;
+    --tablet-button: 2rem;
+    --tablet-text: 1.125rem;
+    --tablet-key-points: 1.25rem; 
+
+    /* desktop font size */
+    --desktop-nav: 1.6rem;
+    --desktop-main-heading: 7.5rem;
+    --desktop-section-heading: 5rem;
+    --desktop-paragraph-heading: 3.4375rem;
+    --desktop-button: 2.5rem;
+    --desktop-text: 1.75rem;
+    --desktop-key-points: 3rem;
+
+}
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  *,
+  *:before,
+  *:after{
+    box-sizing: inherit;
+  }
+
+/*styling the navbar */
+.navbar {
+    background-color: var(--primary-color);
+}
+
+/* styling the website name */
+.branding{
+    color: var(--secondary-color);
+    font-family: var(--font-family-heading-nav);
+    font-size: var(--mobile-logo);
+    font-weight: 500;
+}
+.branding span{
+    transition: all .5s;
+}
+.branding span:nth-child(2){
+    transition-delay: .1s;
+}
+.branding span:nth-child(3){
+    transition-delay: .2s;
+}
+.branding span:nth-child(4){
+    transition-delay: .3s;
+}
+.branding:hover, .branding:focus span {
+    font-weight: 900;
+    font-size: 2.3rem;
+    color: var(--secondary-color);
+    text-shadow:  7px 7px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Style for the off-canvas menu */
+  .offcanvas-header {
+    background-color: #30505B;
+    color: #fff;
+  }
+  .offcanvas-title{
+    font-size: 1.8rem;
+  }
+  .btn-close {
+    filter: invert(1);
+  }
+.nav-link{
+    color: var(--secondary-color);
+    font-family: var(--font-family-heading-nav);
+    font-size: var(--mobile-nav);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.nav-link:hover, .nav-link:focus{
+    font-weight: 900;
+    font-size: 1.7rem;
+    color: var(--secondary-color); 
+    text-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4);
+}
+/* styling the navlinks */
+/* .navbar-nav{
+    background-color: var(--secondary-color);
+    border-radius:  4rem 0 0 4rem ;
+} */
+/* .nav-link{
+    color: var(--white-text);
+    font-family: var(--font-family-heading-nav);
+    font-size: var(--mobile-nav);
+    transition: all 0.3s ease;
+} */
+/* .nav-link:hover, .nav-link:focus{
+    font-weight: 900;
+    color: var(--white-text); 
+    text-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4);
+} */
+.navbar-toggler {
+    border: none;
+    outline: none;
+  }
+.fa-solid{
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+  }
+.fa-solid:active, .fa-solid:hover{
+    font-weight: 900;
+    text-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4);
+    border: none;
+    outline: none;
+  }
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+@media screen and (min-width: 768px){
+    .navbar-nav{
+    background-color: var(--secondary-color);
+    border-radius:  4rem 0 0 4rem ;
+    } 
+    .nav-link{
+    color: var(--white-text);
+    font-size: var(--tablet-nav);
+    font-weight: normal;
+    }
+    .nav-link:hover, .nav-link:focus{
+    color: var(--white-text);
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .nav-link{
+        font-size: var(--desktop-nav);
+        font-weight: normal;
+    }
+    .nav-link:hover, .nav-link:focus{
+        font-size: 2rem;
+        }
+        .branding{
+            font-size: 2.2rem;
+        }
+}
+
