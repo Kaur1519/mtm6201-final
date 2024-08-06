@@ -7,12 +7,12 @@
     --white-text: #FFFFFF;
 
     /* font family */
-    --font-family-heading-nav:  "Roboto", sans-serif;
-    --font-family-text-buttons: "Lobster Two", sans-serif;
+    --font-family-text-buttons:  "Roboto", sans-serif;
+    --font-family-heading-nav: "Lobster Two", sans-serif;
 
     /* mobile font size */
-    --mobile-logo: 2rem;
-    --mobile-nav: 1.3rem;
+    --mobile-logo: 2.8rem;
+    --mobile-nav: 1.8rem;
     --mobile-main-heading: 3.125rem;
     --mobile-section-heading: 2.6875rem;
     --mobile-paragraph-heading: 1.5625rem;
@@ -21,21 +21,21 @@
     --mobile-key-points: 1.125rem; 
 
     /* tablet font size */
-    --tablet-nav: 1.3rem;
+    --tablet-nav: 1.6rem;
     --tablet-main-heading: 5rem;
     --tablet-section-heading: 3.3125rem;
     --tablet-paragraph-heading: 2.1875rem;
-    --tablet-button: 2rem;
+    --tablet-button: 1.3rem;
     --tablet-text: 1.125rem;
     --tablet-key-points: 1.25rem; 
 
     /* desktop font size */
-    --desktop-nav: 1.6rem;
-    --desktop-main-heading: 7.5rem;
-    --desktop-section-heading: 5rem;
+    --desktop-nav: 2rem;
+    --desktop-main-heading: 6.5rem;
+    --desktop-section-heading: 4.5rem;
     --desktop-paragraph-heading: 3.4375rem;
-    --desktop-button: 2.5rem;
-    --desktop-text: 1.75rem;
+    --desktop-button: 1.5rem;
+    --desktop-text: 1.5rem;
     --desktop-key-points: 3rem;
 
 }
@@ -48,6 +48,43 @@ html{
   *:after{
     box-sizing: inherit;
   }
+
+h1, h2, h3{
+    color: var(--secondary-color); 
+    font-family: var(--font-family-heading-nav);
+}
+h1{ 
+    font-size: var(--mobile-main-heading); 
+    text-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+} 
+h1 span{
+    color:var(--tertiary-color);
+}
+h2{
+    font-size: var(--mobile-section-heading); 
+    font-weight: bold;
+}
+h2 span{
+    font-family: var(--font-family-text-buttons);
+    font-size: 2rem;
+    font-weight: lighter;
+}
+.dream h2{
+    color: var(--white-text);
+}
+h3{
+    font-size: var(--mobile-paragraph-heading); 
+}
+p{ 
+    font-size: var(--mobile-text); 
+    font-family: var(--font-family-text-buttons);
+    margin: 20px 0; 
+    color: var(--secondary-color); 
+} 
+.dream p{
+    color: var(--white-text);
+    font-weight: lighter;
+}
 
 /*styling the navbar */
 .navbar {
@@ -75,7 +112,7 @@ html{
 }
 .branding:hover, .branding:focus span {
     font-weight: 900;
-    font-size: 2.3rem;
+    font-size: 3.2rem;
     color: var(--secondary-color);
     text-shadow:  7px 7px 12px rgba(0, 0, 0, 0.4);
 }
@@ -104,22 +141,6 @@ html{
     color: var(--secondary-color); 
     text-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4);
 }
-/* styling the navlinks */
-/* .navbar-nav{
-    background-color: var(--secondary-color);
-    border-radius:  4rem 0 0 4rem ;
-} */
-/* .nav-link{
-    color: var(--white-text);
-    font-family: var(--font-family-heading-nav);
-    font-size: var(--mobile-nav);
-    transition: all 0.3s ease;
-} */
-/* .nav-link:hover, .nav-link:focus{
-    font-weight: 900;
-    color: var(--white-text); 
-    text-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4);
-} */
 .navbar-toggler {
     border: none;
     outline: none;
@@ -139,6 +160,75 @@ html{
     box-shadow: none;
   }
 
+/* hero section */
+.hero{ 
+    background-color: var(--primary-color); 
+    padding: 40px 0; 
+    max-height: 870px;
+} 
+
+.hero img{ 
+    max-width: 300px; 
+    margin-bottom: 20px; 
+} 
+.btn-outline-custom {
+    background-color: white;
+    color: var(--secondary-color); 
+    border-color: var(--secondary-color);
+    border-radius: 4rem 0 0 4rem; 
+    padding: 10px 20px; 
+    font-size: var(--mobile-button);
+    font-family: var(--font-family-text-buttons);
+}
+.btn-outline-custom:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-text);
+}
+.btn-primary{
+    background-color: var(--tertiary-color);
+    color: var(--white-text); 
+    border-color: var(--tertiary-color);
+    border-radius: 0 4rem 4rem 0; 
+    padding: 10px 20px; 
+    font-size: var(--mobile-button);
+    font-family: var(--font-family-text-buttons);
+}
+.btn-primary:hover {
+    background-color: var(--white-text);
+    color: var(--tertiary-color);
+    border-color: var(--tertiary-color);
+}
+.button-group{
+    max-width: 440px;
+} 
+.dream{
+    background-color: var(--secondary-color);
+    margin-top: 190px;
+}
+
+.img-dream{
+    min-height: 480px;
+    position: relative;
+} 
+.img-dream .one, .img-dream .two{
+    max-width: 300px;
+    height: auto;
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.3);
+}
+.img-dream .one{
+    max-width: 330px;
+    border-radius:  13rem 13rem 0 0 ;
+    position: absolute;
+    bottom: 40%;
+    left: 7%;
+}
+.img-dream .two{
+    border-radius:  0 0 13rem 13rem ;
+    position: absolute;
+    top: 10%;
+    right: 7%;
+}
+
 @media screen and (min-width: 768px){
     .navbar-nav{
     background-color: var(--secondary-color);
@@ -152,6 +242,42 @@ html{
     .nav-link:hover, .nav-link:focus{
     color: var(--white-text);
     }
+
+    .hero{
+        max-height: 690px;
+    }
+    h1{
+        font-size: var(--tablet-main-heading);
+    }
+    h2{
+        font-size: var(--tablet-section-heading);
+    }
+    h3{
+        font-size: var(--tablet-paragraph-heading);
+    }
+    p{
+        font-size: var(--tablet-text);
+    }
+    .hero img{
+        max-width: 300px;
+    }
+    .btn{
+        font-size: var(--tablet-button);
+    }
+    .button-group{
+        min-width: 550px;
+    }  
+    .img-dream .one{
+        max-width: 300px;
+        position: absolute;
+        bottom: 50%;
+        right: 30%;
+    }
+    .img-dream .two{
+        max-width: 300px;
+        position: absolute;
+        top: 10%;
+    }
 }
 
 @media screen and (min-width: 1200px){
@@ -163,7 +289,48 @@ html{
         font-size: 2rem;
         }
         .branding{
-            font-size: 2.2rem;
+            font-size: 2.9rem;
+        }
+        .hero{
+            max-height: 690px;
+        }
+        h1{
+            font-size: var(--desktop-main-heading);
+        }
+        h2{
+            font-size: var(--desktop-section-heading);
+        }
+        h3{
+            font-size: var(--desktop-paragraph-heading);
+        }
+        p{
+            font-size: var(--desktop-text);
+        }
+        .hero img{
+            max-width: 400px;
+            
+        }
+        .btn{
+            font-size: var(--desktop-button);
+        }
+        .relative-container{
+            position: relative;
+        }
+        .button-group{
+            max-width: 620px;
+            position: absolute;
+            top: 660px;
+            left: 150px;
+        }
+        .img-dream .one{
+            max-width: 320px;
+            position: absolute;
+            bottom: 45%;
+        }
+        .img-dream .two{
+            position: absolute;
+            top: 20%;
+            left: 20%;
         }
 }
 
