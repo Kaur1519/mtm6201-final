@@ -14,9 +14,17 @@
 </head>
 <body>
 
-    <header>
+  <!-- skip links to make keybord accesible -->
+  <div class="wrapper">
+    <ul class="skip-links">
+        <li><a href="#nav">Skip to Navigation</a></li>
+        <li><a href="#main">Skip to Main content</a></li>
+    </ul>
+  </div>
+
+    <header role="banner">
         <!-- navbar -->
-        <nav class="navbar  navbar-expand-md p-md-0" >
+        <nav class="navbar  navbar-expand-md p-md-0" role="navigation" aria-label="main navigation">
           <div class="container-fluid p-md-0">
             <a class="navbar-brand branding px-2 px-md-4" href="index.html"><span>S</span><span>t</span><span>o</span><span>r</span><span>y</span><span>C</span><span>r</span><span>a</span><span>f</span><span>t</span><span>e</span><span>r</span><span>s</span></a>
 
@@ -29,7 +37,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-center ms-auto py-md-2 px-md-3 ">
+                  <ul class="navbar-nav justify-content-center ms-auto py-md-2 px-md-3 " id="nav">
                     <li class="nav-item px-md-1">
                       <a class="nav-link" aria-current="page" href="about.html">Discover Us</a>
                     </li>
@@ -49,7 +57,7 @@
     </header>
     <!-- html valid -->
 
-    <section class="hero px-4 ">
+    <section class="hero px-4" role="main" id="main" >
         <div class="container-fluid">
             <div class="row p-0 m-0">
                 <div class="relative-container  col-md-7 text-center text-md-start">
@@ -58,15 +66,28 @@
                     <p class="text-md-start">Every small business has its own story that we believe deserves to be shared. Our goal is to convert your idea into an attractive digital identity that will touch your target audience.</p>
                 </div>
                 <div class="col-md-4 text-center mt-md-5 ms-lg-auto">
-                    <img src="images/me.png" alt="Hero Image" class="img-fluid">
+                  <picture>
+                    <source srcset="images/me-480_x_720.jpg, 
+                                    images/me-960_x_1440.jpg 2x" 
+                            media="(max-width: 767px)"/>
+    
+                    <source srcset="images/me-720_x_1080.jpg, 
+                                    images/me-1440_x_2160.jpg 2x" 
+                            media="(min-width: 768px)"/>
+    
+                    <source srcset="images/me-960_x_1440.jpg, 
+                                    images/me-1920_x_2880.jpg 2x" 
+                            media="(min-width: 1200px)"/>
+    
+                    <img src="images/me-720_x_1080.jpg" alt="Hero Image of Ramandeep Kaur" class="img-fluid">
+                </picture>
                 </div>
-            
                 <div class="button-group m-auto">
                     <div class="col-12 col-md-10 col-lg-9 d-flex justify-content-start ">
-                        <button type="button" class="btn btn-outline-custom btn-lg ms-4 ms-md-5">Explore My Work</button>
+                        <button type="button" class="btn btn-outline-custom btn-lg ms-4 ms-md-5" aria-label="Explore raman's work">Explore My Work</button>
                     </div>
                     <div class="col-12 col-md-11 col-lg-10 d-flex justify-content-end ">
-                        <button type="button" class="btn btn-primary btn-lg mt-2 me-4 me-md-5">Bring Your Story Online</button>
+                        <button type="button" class="btn btn-primary btn-lg mt-2 me-4 me-md-5" aria-label="connect with raman to start designing website">Bring Your Story Online</button>
                     </div>
                 </div>
             </div>
@@ -77,16 +98,50 @@
     <section class="dream ">
         <div class="container px-4 px-lg-0 my-5">
           <div class="row  g-5 my-5">
-            <div class=" col-md-6 col-lg-5 img-dream">
-              <img src="images/pexels-rpnickson-3082341.jpg" class="mx-lg-auto img-fluid one" alt="image of a girl designing" loading="lazy">
-              <img src="images/pexels-ketut-subiyanto-4126724.jpg" class="mx-lg-auto img-fluid two" alt="image of working on a website" loading="lazy">
+            <div class=" col-md-5 col-lg-5 img-dream">
+              <picture>
+                <source srcset="images/pexels-rpnickson-3082341-480_x_720.jpg,
+                                images/pexels-rpnickson-3082341-960_x_1440.jpg 2x" 
+                        media="(max-width: 767px)" />
+                
+                <source srcset="images/pexels-rpnickson-3082341-720_x_1080.jpg,
+                                images/pexels-rpnickson-3082341-1440_x_2160.jpg 2x" 
+                        media="(min-width: 768px)" />
+                
+                <source srcset="images/pexels-rpnickson-3082341-960_x_1440.jpg,
+                                images/pexels-rpnickson-3082341-1920_x_2880.jpg 2x" 
+                        media="(min-width: 1200px)" />
+
+                <img src="images/pexels-rpnickson-3082341-720_x_1080.jpg" 
+                     class="mx-lg-auto img-fluid one" 
+                     alt="Image of a girl designing" 
+                     loading="lazy">
+            </picture>
+              <picture>
+                <source srcset="images/pexels-ketut-subiyanto-4126724-480_x_720.jpg,
+                                images/pexels-ketut-subiyanto-4126724-960_x_1440.jpg 2x" 
+                        media="(max-width: 767px)" />
+                
+                <source srcset="images/pexels-ketut-subiyanto-4126724-720_x_1080.jpg,
+                                images/pexels-ketut-subiyanto-4126724-1440_x_2160.jpg 2x" 
+                        media="(min-width: 768px)" />
+                
+                <source srcset="images/pexels-ketut-subiyanto-4126724-960_x_1440.jpg,
+                                images/pexels-ketut-subiyanto-4126724-1920_x_2880.jpg 2x" 
+                        media="(min-width: 1200px)" />
+
+                <img src="images/pexels-ketut-subiyanto-4126724-720_x_1080.jpg" 
+                     class="mx-lg-auto img-fluid two" 
+                     alt="Image of working on a website" 
+                     loading="lazy">
+            </picture>
             </div>
-            <div class=" col-md-6 col-lg-7 ms-auto">
+            <div class=" col-md-7 col-lg-7 ms-auto">
               <h2 class="mb-3 text-center"><span>Our Dream</span><br>
                 Tell Your Story Creatively</h2>
               <p> We believe that every small business has a unique story waiting to be shared with the world. Our dream is to help you express that story with creativity and impact through exceptional web design. We are dedicated to turning your vision into a captivating online presence that not only showcases your brand but also connects deeply with your audience.</p>
               <div class=" d-grid justify-content-end">
-                <button type="button" class="btn btn-primary btn-lg mt-3">Start Crafting Your Story Today</button>
+                <button type="button" class="btn btn-primary btn-lg mt-3" aria-label="Start designing your wensite today">Start Crafting Your Story Today</button>
               </div>
             </div>
           </div>
@@ -94,10 +149,151 @@
     </section>
     <!-- html -->
 
-      
+    <!-- Why We Are Different Section -->
+    <section class="why-different">
+        <div class="container my-5 position-relative">
+          <div class="row">
+            <div class="col-lg-12 text-md-center ">
+              <h2 class="text-center">Why We Are Different</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="background-graphic d-none d-md-none d-lg-none
+              d-xl-block"><img src="images/desktop-graphic.svg" class="mx-lg-auto img-fluid two" alt="background-graphic" loading="lazy"></div>
+            </div>
+            <div class="col-lg-9 col-xl-4">
+              <div class="content">
+                <p class="p-4 p-md-5 mx-4 my-0">What sets us apart is our unwavering commitment to turning your unique story into a digital masterpiece. We don't just build websites; we craft digital experiences that stand out and tell your story with impact.</p>
+              </div>     
+            </div>
+          </div>
+            <div class=" feature-group mx-1 text-center g-1 p-3 p-md-4 col-xl-8">
+                <div class="row">
+                    <div class="col feature-item">
+                        Impactful Storytelling
+                    </div>
+                    <div class="col feature-item">
+                        Cost-Effective Quality
+                    </div>
+                    <div class="col feature-item">
+                        Creative Vision
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- html valid -->
+
+    <!-- services section -->
+    <section class="services">
+      <div class="container my-5">
+        <h2 class="text-center">Service To Meet Your Needs</h2>
+        <div class="row g-5s py-5">
+          <div class="col-6">
+            <picture>
+              <source srcset="images/web-development-480_x_320.jpg,
+                              images/web-development-960_x_640.jpg 2x" 
+                      media="(max-width: 767px)" />
+              
+              <source srcset="images/web-development-720_x_480.jpg,
+                              images/web-development-1440_x_960.jpg 2x" 
+                      media="(min-width: 768px)" />
+              
+              <source srcset="images/web-development-960_x_640.jpg,
+                              images/web-development-1920_x_1280.jpg 2x" 
+                      media="(min-width: 1200px)" />
+    
+              <img src="images/web-development-720x480.jpg" 
+                   class="img-fluid services-img one" 
+                   alt="image of a girl working on a website" 
+                   loading="lazy">
+            </picture>
+          </div>
+          <div class="col-12 col-lg-6 pt-3 ms-auto">
+            <h3>Web Design and Development
+            </h3>
+            <p>We craft visually stunning and highly functional websites that capture your brand’s essence and provide an exceptional user experience.</p>
+            <button type="button" class="btn btn-primary btn-lg mt-2 me-4 me-md-5" aria-label="learn More about our services">Learn More</button>
+          </div>
+        </div>
+        <div class="row flex-lg-row-reverse pb-5">
+          <div class="col-md-12 col-lg-6 d-flex justify-content-end">
+            <picture>
+              <source srcset="images/ux-ui-480_x_320.jpg,
+                              images/ux-ui-960_x_640.jpg 2x" 
+                      media="(max-width: 767px)" />
+              
+              <source srcset="images/ux-ui-720_x_480.jpg,
+                              images/ux-ui-1440_x_960.jpg 2x" 
+                      media="(min-width: 768px)" />
+              
+              <source srcset="images/ux-ui-960_x_640.jpg,
+                              images/ux-ui-1920_x_1280.jpg 2x" 
+                      media="(min-width: 1200px)" />
+    
+              <img src="images/ux-ui-720_x_480.jpg" 
+                   class="services-img two img-fluid my-0 my-lg-0" 
+                   alt="image of a web development process wireframes" 
+                   loading="lazy">
+            </picture>
+          </div>
+          <div class="col-12 col-lg-6 pt-3 me-auto">
+            <h3>UX and UI design</h3>
+            <p>Our user experience (UX) and user interface (UI) design services ensure your website is not only visually appealing but also intuitive and user-friendly, creating a seamless journey for your visitors.</p>
+            <button type="button" class="btn btn-primary btn-lg mt-2 me-4 me-md-5" aria-label="learn more about our services">Learn More</button>
+          </div>
+        </div>
+        <div class="row pb-5">
+          <div class="col-6">
+            <picture>
+              <source srcset="images/seo-480_x_320.jpg,
+                              images/seo-960_x_640.jpg 2x" 
+                      media="(max-width: 767px)" />
+              
+              <source srcset="images/seo-720_x_480.jpg,
+                              images/seo-1440_x_960.jpg 2x" 
+                      media="(min-width: 768px)" />
+              
+              <source srcset="images/seo-960_x_640.jpg,
+                              images/seo-1920_x_1280.jpg 2x" 
+                      media="(min-width: 1200px)" />
+    
+              <!-- Fallback image -->
+              <img src="images/seo-720_x_480.jpg" 
+                   class="services-img three img-fluid" 
+                   alt="image of SEO analysis" 
+                   loading="lazy">
+            </picture>
+          </div>
+          <div class="col-12 col-lg-6 pt-3 ">
+            <h3>SEO and Digital Marketing
+            </h3>
+            <p>Enhance your online visibility and attract more organic traffic with our strategic SEO services. We optimize your website to rank higher in search engine results, ensuring your audience finds you easily.</p>
+            <button type="button" class="btn btn-primary btn-lg mt-2 me-4 me-md-5" aria-label="learn more about our services">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer py-4 text-white" role="contentinfo" > 
+      <div class="container text-center"> 
+        <p class="">&copy; 2024 Raman. All rights reserved.</p> 
+        <ul class="list-inline"> 
+          <li class="list-inline-item">
+            <a href="#">Privacy Policy</a>
+          </li> 
+          <li class="list-inline-item">
+            <a href="#" >Terms of Service</a>
+          </li> 
+        </ul> 
+      </div> 
+    </footer> 
+       
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
