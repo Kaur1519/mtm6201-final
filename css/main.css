@@ -491,4 +491,22 @@ a:focus{
     }
 
 }
+/* animation */
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+.relative-container p{
+    animation-delay: 0.5s;
+}
+.button-group .anim{
+    animation-delay: 1s;
+}
 
