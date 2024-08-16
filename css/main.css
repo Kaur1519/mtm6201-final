@@ -35,7 +35,7 @@
     --desktop-section-heading: 4.5rem;
     --desktop-paragraph-heading: 3.4375rem;
     --desktop-button: 1.5rem;
-    --desktop-text: 1.5rem;
+    --desktop-text: 1.3rem;
     --desktop-key-points: 2rem;
 
 }
@@ -409,9 +409,9 @@ a:focus{
 
 
     /* headings desktop */
-    h1{
+    /* h1{
         font-size: var(--desktop-main-heading);
-    }
+    } */
     h2{
         font-size: var(--desktop-section-heading);
     }
@@ -420,9 +420,9 @@ a:focus{
     }
 
     /* paragraph desktop */
-    p{
+    /* p{
         font-size: var(--desktop-text);
-    }
+    } */
 
     .feature-item{
         font-size: var(--desktop-key-points);
