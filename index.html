@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/92d4d20c34.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -102,7 +103,7 @@
     <section class="dream ">
       <div class="container px-4 px-lg-0 my-5">
         <div class="row  g-5 my-5">
-          <div class=" col-md-5 col-lg-5 img-dream">
+          <div class=" col-md-5 col-lg-5 img-dream"  data-aos="fade-up">
             <picture>
               <source srcset="images/pexels-rpnickson-3082341-480_x_720.jpg,
                               images/pexels-rpnickson-3082341-960_x_1440.jpg 2x" 
@@ -140,7 +141,7 @@
                     loading="lazy">
             </picture>
           </div>
-          <div class=" col-md-7 col-lg-7 ms-auto">
+          <div class=" col-md-7 col-lg-7 ms-auto" data-aos="fade-left">
             <h2 class="mb-3 text-center"><span>Our Dream</span><br>Tell Your Story Creatively</h2>
             <p> We believe that every small business has a unique story waiting to be shared with the world. Our dream is to help you express that story with creativity and impact through exceptional web design. We are dedicated to turning your vision into a captivating online presence that not only showcases your brand but also connects deeply with your audience.</p>
             <div class=" d-grid justify-content-end">
@@ -174,7 +175,7 @@
             </div>     
           </div>
         </div>
-        <div class=" feature-group mx-1 text-center g-1 p-3 p-md-4 col-xl-8">
+        <div class=" feature-group mx-1 text-center g-1 p-3 p-md-4 col-xl-8" data-aos="zoom-in-right">
           <div class="row">
               <div class="col feature-item">
                 Impactful Storytelling
@@ -196,9 +197,12 @@
   <div class="wrapper">
     <section class="services">
       <div class="container my-5">
-        <h2 class="text-center">Service To Meet Your Needs</h2>
+        <h2 class="text-center" data-aos="fade-up"
+        data-aos-duration="1000">Service To Meet Your Needs</h2>
         <div class="row g-5s py-5">
-          <div class="col-6">
+          <div class="col-6" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <picture>
               <source srcset="images/web-development-480_x_320.jpg,
                               images/web-development-960_x_640.jpg 2x" 
@@ -225,7 +229,9 @@
           </div>
         </div>
         <div class="row flex-lg-row-reverse pb-5">
-          <div class="col-md-12 col-lg-6 d-flex justify-content-end">
+          <div class="col-md-12 col-lg-6 d-flex justify-content-end" data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <picture>
               <source srcset="images/ux-ui-480_x_320.jpg,
                               images/ux-ui-960_x_640.jpg 2x" 
@@ -252,7 +258,9 @@
           </div>
         </div>
         <div class="row pb-5">
-          <div class="col-6">
+          <div class="col-6" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <picture>
               <source srcset="images/seo-480_x_320.jpg,
                               images/seo-960_x_640.jpg 2x" 
@@ -299,10 +307,12 @@
       </div> 
     </footer> 
   </div>
-       
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
