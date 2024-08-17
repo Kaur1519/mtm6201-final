@@ -35,7 +35,7 @@
     --desktop-section-heading: 4.5rem;
     --desktop-paragraph-heading: 3.4375rem;
     --desktop-button: 1.5rem;
-    --desktop-text: 1.5rem;
+    --desktop-text: 1.3rem;
     --desktop-key-points: 2rem;
 
 }
@@ -48,6 +48,11 @@ html{
   *:after{
     box-sizing: inherit;
   }
+/*adding max width for each section  */
+.wrapper{
+  max-width: 1520px;
+  margin: 0 auto;
+}
 
 h1, h2, h3{
     color: var(--secondary-color); 
@@ -56,10 +61,18 @@ h1, h2, h3{
 h1{ 
     font-size: var(--mobile-main-heading); 
     text-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+    line-height: 2rem;
 } 
+h1 span{
+  font-size: var(--mobile-paragraph-heading);
+  color: var(--tertiary-color)
+}
 h2{
     font-size: var(--mobile-section-heading); 
     font-weight: bold;
+}
+.info h2{
+  color: var(--white-text);
 }
 h3{
     font-size: var(--mobile-paragraph-heading); 
@@ -70,6 +83,12 @@ p{
     margin: 20px 0; 
     color: var(--secondary-color); 
 } 
+.info p{
+  color: var(--white-text);
+}
+label{
+  font-family: var(--font-family-text-buttons);
+}
 
 /*  styling the skip-links */ 
 .skip-links li{
@@ -205,3 +224,133 @@ a:focus{
     color: var(--secondary-color);
     text-shadow:  7px 7px 12px rgba(0, 0, 0, 0.4);
 }
+
+/* styling the footer */
+.footer{
+  background-color: var(--primary-color);
+  font-family: var(--font-family-heading-nav);
+  font-size: var(--mobile-text);
+}
+.footer p{
+  color: var(--secondary-color);
+}
+.footer ul a{
+  color: var(--tertiary-color);
+}
+
+/* styling the contact section */
+.contact{
+  background-color: var(--primary-color);
+}
+
+/* styling the contact info */
+.info{
+  background-color: var(--secondary-color);
+  max-width: 370px;
+  min-height: 470px;
+  border-radius: 25rem 25rem 0 0;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* styling the form section */
+.message{
+  background-color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px){
+
+  /* nav for tablet */
+  .navbar-nav{
+  background-color: var(--secondary-color);
+  border-radius:  4rem 0 0 4rem ;
+  } 
+  .nav-link{
+  color: var(--white-text);
+  font-size: var(--tablet-nav);
+  font-weight: normal;
+  }
+  .nav-link:hover, .nav-link:focus{
+  color: var(--white-text);
+  }
+
+  /* heading tablet */
+  h1{
+    font-size: var(--tablet-main-heading);
+    line-height: 3.8rem;
+  }
+  h1 span{
+    font-size: var(--tablet-paragraph-heading);
+  }
+  h2{
+    font-size: var(--tablet-section-heading);
+  }
+  h3{
+    font-size: var(--tablet-paragraph-heading);
+  }
+  /* paragraph tabet */
+  p{
+    font-size: var(--tablet-text);
+  }
+
+  /* button tablet */
+  .btn{
+    font-size: var(--tablet-button);
+  }
+
+  .information{
+    margin-top: -150px;
+  }
+  .send{
+    margin-top: -300px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+
+  /* navebar desktop */
+  .nav-link{
+      font-size: var(--desktop-nav);
+      font-weight: normal;
+  }
+  .nav-link:hover, .nav-link:focus{
+      font-size: 2rem;
+      }
+  .branding{
+      font-size: 2.9rem;
+  }
+
+  /* headings desktop */
+  h1{
+      font-size: var(--desktop-main-heading);
+  }
+  h2{
+      font-size: var(--desktop-section-heading);
+  }
+  h3{
+      font-size: var(--desktop-paragraph-heading);
+  }
+
+  /* paragraph desktop */
+  p{
+      font-size: var(--desktop-text);
+  }
+
+  .feature-item{
+      font-size: var(--desktop-key-points);
+      font-family: var(--font-family-heading-nav);
+  }
+  
+  /* button desktop */
+  .btn{
+      font-size: var(--desktop-button);
+  }
+  /* styling the contact info */
+  .info{
+    max-width: 450px;
+    min-height: 600px;
+  }
+  .send{
+    margin-top: -250px;
+  }
+}
+/* css valid */
